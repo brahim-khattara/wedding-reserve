@@ -31,7 +31,6 @@ const UserReservationPage = () => {
     weddingPlace: "",
     quranReading: "",
     artOnUs: "",
-    email: "",
     phone: "",
     phone2: "",
   });
@@ -146,8 +145,8 @@ const UserReservationPage = () => {
       return;
     }
 
-    if (!reservationForm.name || !reservationForm.email) {
-      setSubmissionStatus("الاسم والبريد الإلكتروني مطلوبان");
+    if (!reservationForm.name) {
+      setSubmissionStatus("الاسم  مطلوبان");
       return;
     }
 
@@ -166,7 +165,6 @@ const UserReservationPage = () => {
       setSubmissionStatus(null);
       setReservationForm({
         name: "",
-        email: "",
         phone: "",
       });
       setSelectedDate(null);
