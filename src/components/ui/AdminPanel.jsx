@@ -49,8 +49,15 @@ const AdminPanel = () => {
           .map(reservation => ({
             التاريخ: new Date(date).toLocaleDateString(),
             الاسم: reservation.name,
-            الهاتف: reservation.phone || 'غير متوفر',
-           'حالة التأكيد': reservation.confirmed ? 'مؤكد' : 'قيد الانتظار'
+            'الأب والجد' : reservation.dadAndGrandDad,
+            العشيرة: reservation.tribe, 
+            'مكان العرس': reservation.weddingPlace, 
+            'قراءة القرآن': reservation.quranReading, 
+            'الفرقة الفنية' : reservation.artOnUs, 
+            'الهاتف 1': reservation.phone, 
+            'الهاتف 2' : reservation.phone || 'غير متوفر',
+            'حالة التأكيد': reservation.confirmed ? 'مؤكد' : 'قيد الانتظار',
+
           }))
       );
 
